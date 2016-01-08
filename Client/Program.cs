@@ -17,7 +17,9 @@ namespace Client
             {
                 //InvocateCalculatorServiceViaCode();
 
-                InvocateCalculatorServcieViaConfiguration();
+                //InvocateCalculatorServcieViaConfiguration();
+
+                InvocateCalcultorServiceDisplayByCallback();
             }
             catch (Exception ex)
             {
@@ -40,87 +42,101 @@ namespace Client
             //}
         }
 
-        static void InvocateCalculatorServiceViaCode()
+        //static void InvocateCalculatorServiceViaCode()
+        //{
+        //    Binding httpBinding = new BasicHttpBinding();
+        //    Binding tcpBinding = new NetTcpBinding();
+
+        //    EndpointAddress httpAddress = new EndpointAddress("http://localhost:8888/calculatorservice");
+        //    EndpointAddress tcpAddress = new EndpointAddress("net.tcp://localhost:9999/calculatorservice");
+        //    EndpointAddress httpAddress_iisHost = new EndpointAddress("http://localhost:49804/CalculatorService.svc");
+
+        //    Console.WriteLine("Invocate self-host calculator service ...");
+
+        //    using (CalculatorClient calculator_http = new CalculatorClient(httpBinding, httpAddress))
+        //    {
+        //        using (CalculatorClient calculator_tcp = new CalculatorClient(tcpBinding, tcpAddress))
+        //        {
+        //            try
+        //            {
+        //                Console.WriteLine("Begin to invocate calculator service via http transport ...");
+        //                Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_http.Add(1, 2));
+
+        //                Console.WriteLine("Begin to invocate calculator service via tcp transport ...");
+        //                Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_tcp.Add(1, 2));
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                Console.WriteLine(ex.Message);
+        //            }
+        //        }
+        //    }
+
+        //    Console.WriteLine("\n\nInvocate IIS-host calculator service ...");
+
+        //    using (CalculatorClient calculator = new CalculatorClient(httpBinding, httpAddress_iisHost))
+        //    {
+        //        try
+        //        {
+        //            Console.WriteLine("Begin to invocate calculator service http transport ...");
+        //            Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator.Add(1, 2));
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Console.WriteLine(ex.Message);
+        //        }
+        //    }
+        //}
+
+        //static void InvocateCalculatorServcieViaConfiguration()
+        //{
+        //    Console.WriteLine("Invocate self-host calculator service ...");
+
+        //    using (CalculatorClient calculator_http = new CalculatorClient("selfHostEndpoint_http"))
+        //    {
+        //        using (CalculatorClient calculator_tcp = new CalculatorClient("selfHostEndpoint_tcp"))
+        //        {
+        //            try
+        //            {
+        //                Console.WriteLine("Begin to invocate calculator service via http transport ...");
+        //                Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_http.Add(1, 2));
+
+        //                Console.WriteLine("Begin to invocate calculator service via tcp transport ...");
+        //                Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_tcp.Add(1, 2));
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                Console.WriteLine(ex.Message);
+        //            }
+        //        }
+        //    }
+
+        //    Console.WriteLine("\n\nInvocate IIS-host calculator service ...");
+
+        //    using (CalculatorClient calculator = new CalculatorClient("iisHostEndpoint"))
+        //    {
+        //        try
+        //        {
+        //            Console.WriteLine("Begin to invocate calculator service via http transport ...");
+        //            Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator.Add(1, 2));
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Console.WriteLine(ex.Message);
+        //        }
+        //    }
+        //}
+
+        static void InvocateCalcultorServiceDisplayByCallback()
         {
-            Binding httpBinding = new BasicHttpBinding();
-            Binding tcpBinding = new NetTcpBinding();
-
-            EndpointAddress httpAddress = new EndpointAddress("http://localhost:8888/calculatorservice");
-            EndpointAddress tcpAddress = new EndpointAddress("net.tcp://localhost:9999/calculatorservice");
-            EndpointAddress httpAddress_iisHost = new EndpointAddress("http://localhost:49804/CalculatorService.svc");
-
-            Console.WriteLine("Invocate self-host calculator service ...");
-
-            using (CalculatorClient calculator_http = new CalculatorClient(httpBinding, httpAddress))
+            InstanceContext instanceContext = new InstanceContext(new CalculateCallback());
+            using (DuplexChannelFactory<ICalculator> channelFactory = new DuplexChannelFactory<ICalculator>(instanceContext, "selfHostEndpoint_tcp"))
             {
-                using (CalculatorClient calculator_tcp = new CalculatorClient(tcpBinding, tcpAddress))
+                ICalculator proxy = channelFactory.CreateChannel();
+                using (proxy as IDisposable)
                 {
-                    try
-                    {
-                        Console.WriteLine("Begin to invocate calculator service via http transport ...");
-                        Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_http.Add(1, 2));
-
-                        Console.WriteLine("Begin to invocate calculator service via tcp transport ...");
-                        Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_tcp.Add(1, 2));
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                }
-            }
-
-            Console.WriteLine("\n\nInvocate IIS-host calculator service ...");
-
-            using (CalculatorClient calculator = new CalculatorClient(httpBinding, httpAddress_iisHost))
-            {
-                try
-                {
-                    Console.WriteLine("Begin to invocate calculator service http transport ...");
-                    Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator.Add(1, 2));
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-        }
-
-        static void InvocateCalculatorServcieViaConfiguration()
-        {
-            Console.WriteLine("Invocate self-host calculator service ...");
-
-            using (CalculatorClient calculator_http = new CalculatorClient("selfHostEndpoint_http"))
-            {
-                using (CalculatorClient calculator_tcp = new CalculatorClient("selfHostEndpoint_tcp"))
-                {
-                    try
-                    {
-                        Console.WriteLine("Begin to invocate calculator service via http transport ...");
-                        Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_http.Add(1, 2));
-
-                        Console.WriteLine("Begin to invocate calculator service via tcp transport ...");
-                        Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator_tcp.Add(1, 2));
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                }
-            }
-
-            Console.WriteLine("\n\nInvocate IIS-host calculator service ...");
-
-            using (CalculatorClient calculator = new CalculatorClient("iisHostEndpoint"))
-            {
-                try
-                {
-                    Console.WriteLine("Begin to invocate calculator service via http transport ...");
-                    Console.WriteLine("x + y = {2} where x = {0} and y = {1}", 1, 2, calculator.Add(1, 2));
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                    proxy.Add(1, 2);
+                    Console.Read();
                 }
             }
         }
