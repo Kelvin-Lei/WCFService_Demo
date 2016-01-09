@@ -46,6 +46,8 @@
     <Compile Include="DataContractProduct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLOrder.cs" />
+    <Compile Include="XMLProduct.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

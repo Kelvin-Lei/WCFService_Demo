@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace WCFSerialization
 {
@@ -16,9 +17,11 @@ namespace WCFSerialization
 
         static void Main(string[] args)
         {
-            SerializeViaDataContractSerializer();
+            //SerializeViaDataContractSerializer();
+            //DeserializeViaDataContractSerializer();
 
-            DeserializeViaDataContractSerializer();
+            SerializeViaXMLSerializer();
+            DeserializeViaXMLSerializer();
         }
 
         static void SerializeViaDataContractSerializer()
@@ -48,6 +51,39 @@ namespace WCFSerialization
                 using (XmlDictionaryReader reader = XmlDictionaryReader.CreateTextReader(fs, new XmlDictionaryReaderQuotas()))
                 {
                     order = serializer.ReadObject(reader) as DataContractOrder;
+                }
+            }
+
+            Console.WriteLine(order);
+            Console.Read();
+        }
+
+        static void SerializeViaXMLSerializer()
+        {
+            XMLProduct product = new XMLProduct(Guid.NewGuid(), "Dell PC", "Xiamen FuJian", 4500);
+            XMLOrder order = new XMLOrder(Guid.NewGuid(), DateTime.Today, product, 300);
+            string fileName = _basePath + "Order.XmlSerializer.xml";
+            using (FileStream fs = new FileStream(fileName, FileMode.Create))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(XMLOrder));
+                using (XmlDictionaryWriter writer = XmlDictionaryWriter.CreateTextWriter(fs))
+                {
+                    serializer.Serialize(writer, order);
+                }
+            }
+            Process.Start(fileName);
+        }
+
+        static void DeserializeViaXMLSerializer()
+        {
+            string fileName = _basePath + "Order.XmlSerializer.xml";
+            XMLOrder order;
+            using (FileStream fs = new FileStream(fileName, FileMode.Open))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(XMLOrder), "http://WCFService/WCFSerialization");
+                using (XmlDictionaryReader reader = XmlDictionaryReader.CreateTextReader(fs, new XmlDictionaryReaderQuotas()))
+                {
+                    order = serializer.Deserialize(reader) as XMLOrder;
                 }
             }
 
