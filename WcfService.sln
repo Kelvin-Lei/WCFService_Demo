@@ -42,6 +42,38 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloadableContract.Hostin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloadableContract.Service", "OverloadableContract.Service\OverloadableContract.Service.csproj", "{3DF81CA6-890B-49EE-9E48-DAB2CB04B531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceHierarchy.BusinessEntity", "InheritanceHierarchy.BusinessEntity\InheritanceHierarchy.BusinessEntity.csproj", "{DD4ABBE6-092A-4828-B50E-1EEEB69152CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceHierarchy.Client", "InheritanceHierarchy.Client\InheritanceHierarchy.Client.csproj", "{547FF752-01C8-407D-AF1F-4A3A53A192B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{919CF6C3-0660-433F-9A56-BDDBDDC07410} = {919CF6C3-0660-433F-9A56-BDDBDDC07410}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceHierarchy.Service", "InheritanceHierarchy.Service\InheritanceHierarchy.Service.csproj", "{84012553-8688-4F4E-9848-A7BC742C1FEC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "InheritanceHierarchy", "http://localhost:10791", "{919CF6C3-0660-433F-9A56-BDDBDDC07410}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{84012553-8688-4f4e-9848-a7bc742c1fec}|InheritanceHierarchy.Service.dll;{DD4ABBE6-092A-4828-B50E-1EEEB69152CA}|InheritanceHierarchy.BusinessEntity.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_10791"
+		Debug.AspNetCompiler.PhysicalPath = "InheritanceHierarchy\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10791\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_10791"
+		Release.AspNetCompiler.PhysicalPath = "InheritanceHierarchy\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10791\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "InheritanceHierarchy\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +116,22 @@ Global
 		{3DF81CA6-890B-49EE-9E48-DAB2CB04B531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DF81CA6-890B-49EE-9E48-DAB2CB04B531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DF81CA6-890B-49EE-9E48-DAB2CB04B531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD4ABBE6-092A-4828-B50E-1EEEB69152CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4ABBE6-092A-4828-B50E-1EEEB69152CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4ABBE6-092A-4828-B50E-1EEEB69152CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4ABBE6-092A-4828-B50E-1EEEB69152CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547FF752-01C8-407D-AF1F-4A3A53A192B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547FF752-01C8-407D-AF1F-4A3A53A192B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547FF752-01C8-407D-AF1F-4A3A53A192B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547FF752-01C8-407D-AF1F-4A3A53A192B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84012553-8688-4F4E-9848-A7BC742C1FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84012553-8688-4F4E-9848-A7BC742C1FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84012553-8688-4F4E-9848-A7BC742C1FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84012553-8688-4F4E-9848-A7BC742C1FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919CF6C3-0660-433F-9A56-BDDBDDC07410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919CF6C3-0660-433F-9A56-BDDBDDC07410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919CF6C3-0660-433F-9A56-BDDBDDC07410}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{919CF6C3-0660-433F-9A56-BDDBDDC07410}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
