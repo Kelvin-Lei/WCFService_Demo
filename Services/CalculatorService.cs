@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,9 +10,12 @@ namespace Services
 {
     public class CalculatorService : ICalculator
     {
-        public double Add(double x, double y)
+        public void Add(double x, double y)
         {
-            return x + y;
+            //return x + y;
+            double result = x + y;
+            ICallback callback = OperationContext.Current.GetCallbackChannel<ICallback>();
+            callback.DisplayResult(x, y, result);
         }
 
         public double Subtract(double x, double y)

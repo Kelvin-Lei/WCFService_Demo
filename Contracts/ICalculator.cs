@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Contracts
 {
-    [ServiceContract]
+    [ServiceContract(CallbackContract=typeof(ICallback))]
     public interface ICalculator
     {
-        [OperationContract]
-        double Add(double x, double y);
+        [OperationContract(IsOneWay=true)]
+        void Add(double x, double y);
 
         [OperationContract]
         double Subtract(double x, double y);
