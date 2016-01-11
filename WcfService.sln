@@ -82,6 +82,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionfulCalculator.Hostin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionfulCalculator.Service", "SessionfulCalculator.Service\SessionfulCalculator.Service.csproj", "{03825214-6B80-487C-BBD7-A27BB3A4BC91}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExceptionHandling", "ExceptionHandling", "{FC0FE182-E200-4B41-B565-59DA7F311908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Client", "ExceptionHanding.Client\ExceptionHandling.Client.csproj", "{8950C880-C579-4CD5-B535-F7D254E440B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Contract", "ExceptionHanding.Contract\ExceptionHandling.Contract.csproj", "{7B077B16-0589-4CE7-836E-BD93F5CF21D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Hosting", "ExceptionHanding.Hosting\ExceptionHandling.Hosting.csproj", "{33EED97B-3FE5-4DBA-AD38-7A8FC40B51A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Service", "ExceptionHanding.Service\ExceptionHandling.Service.csproj", "{BA1B1F7D-59D5-4FF0-A155-BAE34B76EEF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,8 +166,30 @@ Global
 		{03825214-6B80-487C-BBD7-A27BB3A4BC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03825214-6B80-487C-BBD7-A27BB3A4BC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03825214-6B80-487C-BBD7-A27BB3A4BC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8950C880-C579-4CD5-B535-F7D254E440B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8950C880-C579-4CD5-B535-F7D254E440B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8950C880-C579-4CD5-B535-F7D254E440B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8950C880-C579-4CD5-B535-F7D254E440B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B077B16-0589-4CE7-836E-BD93F5CF21D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B077B16-0589-4CE7-836E-BD93F5CF21D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B077B16-0589-4CE7-836E-BD93F5CF21D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B077B16-0589-4CE7-836E-BD93F5CF21D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EED97B-3FE5-4DBA-AD38-7A8FC40B51A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EED97B-3FE5-4DBA-AD38-7A8FC40B51A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EED97B-3FE5-4DBA-AD38-7A8FC40B51A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EED97B-3FE5-4DBA-AD38-7A8FC40B51A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1B1F7D-59D5-4FF0-A155-BAE34B76EEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1B1F7D-59D5-4FF0-A155-BAE34B76EEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1B1F7D-59D5-4FF0-A155-BAE34B76EEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1B1F7D-59D5-4FF0-A155-BAE34B76EEF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8950C880-C579-4CD5-B535-F7D254E440B9} = {FC0FE182-E200-4B41-B565-59DA7F311908}
+		{7B077B16-0589-4CE7-836E-BD93F5CF21D1} = {FC0FE182-E200-4B41-B565-59DA7F311908}
+		{33EED97B-3FE5-4DBA-AD38-7A8FC40B51A0} = {FC0FE182-E200-4B41-B565-59DA7F311908}
+		{BA1B1F7D-59D5-4FF0-A155-BAE34B76EEF9} = {FC0FE182-E200-4B41-B565-59DA7F311908}
 	EndGlobalSection
 EndGlobal
