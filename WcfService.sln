@@ -116,6 +116,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveQueuedService.Loc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsiveQueuedService.Service", "ResponsiveQueuedService.Service\ResponsiveQueuedService.Service.csproj", "{20C6C001-6C0D-4970-B4B2-3EC9EDC9ED1A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessagingViaBinding", "MessagingViaBinding", "{C491B33D-B375-499A-A90D-498665501A33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingViaBinding.Client", "MessagingViaBinding.Client\MessagingViaBinding.Client.csproj", "{6A0B1759-4D28-43D8-BB36-DC68B455C1DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingViaBinding.Server", "MessagingViaBinding.Server\MessagingViaBinding.Server.csproj", "{BF33AB54-8C06-40A4-A0D6-278627BF1522}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -246,6 +252,14 @@ Global
 		{20C6C001-6C0D-4970-B4B2-3EC9EDC9ED1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20C6C001-6C0D-4970-B4B2-3EC9EDC9ED1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20C6C001-6C0D-4970-B4B2-3EC9EDC9ED1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0B1759-4D28-43D8-BB36-DC68B455C1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0B1759-4D28-43D8-BB36-DC68B455C1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0B1759-4D28-43D8-BB36-DC68B455C1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0B1759-4D28-43D8-BB36-DC68B455C1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF33AB54-8C06-40A4-A0D6-278627BF1522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF33AB54-8C06-40A4-A0D6-278627BF1522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF33AB54-8C06-40A4-A0D6-278627BF1522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF33AB54-8C06-40A4-A0D6-278627BF1522}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -265,5 +279,7 @@ Global
 		{A79F75CA-8EA7-40BD-B099-F6396E085B1A} = {AD5AF577-4681-496B-8119-D746F8B84C47}
 		{D931B599-3CCB-4C81-851A-5DEF7D23E9D9} = {AD5AF577-4681-496B-8119-D746F8B84C47}
 		{20C6C001-6C0D-4970-B4B2-3EC9EDC9ED1A} = {AD5AF577-4681-496B-8119-D746F8B84C47}
+		{6A0B1759-4D28-43D8-BB36-DC68B455C1DF} = {C491B33D-B375-499A-A90D-498665501A33}
+		{BF33AB54-8C06-40A4-A0D6-278627BF1522} = {C491B33D-B375-499A-A90D-498665501A33}
 	EndGlobalSection
 EndGlobal
