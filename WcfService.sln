@@ -166,6 +166,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityInstanceProvider.Messa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityInstanceProvider.Messages.Client", "UnityInstanceProvider.Messages.Client\UnityInstanceProvider.Messages.Client.csproj", "{4B7705AA-46FC-4A73-BF63-D6D93CA2AF59}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PolicyInjectionInstanceProvider", "PolicyInjectionInstanceProvider", "{8BF27564-4545-4FEC-B250-9ED25F8AF9E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyInjectionInstanceProvider.WCFExtensions", "PolicyInjectionInstanceProvider.WCFExtensions\PolicyInjectionInstanceProvider.WCFExtensions.csproj", "{4B02D463-B842-48B9-9531-E9B853EF5981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyInjectionInstanceProvider.TimeService.Contract", "PolicyInjectionInstanceProvider.ITime.Contract\PolicyInjectionInstanceProvider.TimeService.Contract.csproj", "{A3820B01-3B9E-46EC-8415-361B31706B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyInjectionInstanceProvider.TimeService.Service", "PolicyInjectionInstanceProvider.TimeService.Service\PolicyInjectionInstanceProvider.TimeService.Service.csproj", "{A74054BC-56FE-4E8F-90D2-0955B6C92EC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyInjectionInstanceProvider.TimeService.Hosting", "PolicyInjectionInstanceProvider.TimeService.Hosting\PolicyInjectionInstanceProvider.TimeService.Hosting.csproj", "{A511CC31-59C9-4DA2-8D68-FDEE1C8D5994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyInjectionInstanceProvider.TimeService.Client", "PolicyInjectionInstanceProvider.TimeService.Client\PolicyInjectionInstanceProvider.TimeService.Client.csproj", "{AD05F159-3B48-48B2-9A99-E05C0C68C6BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -376,6 +388,26 @@ Global
 		{4B7705AA-46FC-4A73-BF63-D6D93CA2AF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B7705AA-46FC-4A73-BF63-D6D93CA2AF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B7705AA-46FC-4A73-BF63-D6D93CA2AF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B02D463-B842-48B9-9531-E9B853EF5981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B02D463-B842-48B9-9531-E9B853EF5981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B02D463-B842-48B9-9531-E9B853EF5981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B02D463-B842-48B9-9531-E9B853EF5981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3820B01-3B9E-46EC-8415-361B31706B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3820B01-3B9E-46EC-8415-361B31706B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3820B01-3B9E-46EC-8415-361B31706B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3820B01-3B9E-46EC-8415-361B31706B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74054BC-56FE-4E8F-90D2-0955B6C92EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74054BC-56FE-4E8F-90D2-0955B6C92EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74054BC-56FE-4E8F-90D2-0955B6C92EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74054BC-56FE-4E8F-90D2-0955B6C92EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A511CC31-59C9-4DA2-8D68-FDEE1C8D5994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A511CC31-59C9-4DA2-8D68-FDEE1C8D5994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A511CC31-59C9-4DA2-8D68-FDEE1C8D5994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A511CC31-59C9-4DA2-8D68-FDEE1C8D5994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD05F159-3B48-48B2-9A99-E05C0C68C6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD05F159-3B48-48B2-9A99-E05C0C68C6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD05F159-3B48-48B2-9A99-E05C0C68C6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD05F159-3B48-48B2-9A99-E05C0C68C6BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -415,5 +447,13 @@ Global
 		{B5467853-50E6-410E-BE01-3EB5C36DB9FC} = {4791E660-8251-4B13-8490-8915230DD429}
 		{FD7FE5D7-15C4-401A-8211-CA6AFD3CE106} = {4791E660-8251-4B13-8490-8915230DD429}
 		{4B7705AA-46FC-4A73-BF63-D6D93CA2AF59} = {4791E660-8251-4B13-8490-8915230DD429}
+		{4B02D463-B842-48B9-9531-E9B853EF5981} = {8BF27564-4545-4FEC-B250-9ED25F8AF9E8}
+		{A3820B01-3B9E-46EC-8415-361B31706B12} = {8BF27564-4545-4FEC-B250-9ED25F8AF9E8}
+		{A74054BC-56FE-4E8F-90D2-0955B6C92EC4} = {8BF27564-4545-4FEC-B250-9ED25F8AF9E8}
+		{A511CC31-59C9-4DA2-8D68-FDEE1C8D5994} = {8BF27564-4545-4FEC-B250-9ED25F8AF9E8}
+		{AD05F159-3B48-48B2-9A99-E05C0C68C6BF} = {8BF27564-4545-4FEC-B250-9ED25F8AF9E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.PolicyInjection.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
