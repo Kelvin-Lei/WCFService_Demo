@@ -188,6 +188,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionManagement.Hosting",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionManagement.Client", "SessionManagement.Client\SessionManagement.Client.csproj", "{8BAE8B88-C52A-4C8F-AEBB-0FDF19C7C263}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PooledInstanceProvider", "PooledInstanceProvider", "{ABA499D9-3EA9-4A62-833C-B2C5AF0B781C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooledInstanceProvider.WCFExtensions", "PooledInstanceProvider.WCFExtensions\PooledInstanceProvider.WCFExtensions.csproj", "{D4B03E90-B85B-4368-ACE8-A26E1487976A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooledInstanceProvider.Contracts", "PooledInstanceProvider.Contracts\PooledInstanceProvider.Contracts.csproj", "{DA8D47CA-0336-47F5-8163-C62F218097D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooledInstanceProvicer.Services", "PooledInstanceProvicer.Services\PooledInstanceProvicer.Services.csproj", "{91D0369E-B93C-4C2C-80F7-DFD3A273F4FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooledInstanceProvider.Hosting", "PooledInstanceProvider.Hosting\PooledInstanceProvider.Hosting.csproj", "{F86E1B38-F595-41FF-9175-1BA08088B3E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooledInstanceProvider.Clients", "PooledInstanceProvider.Clients\PooledInstanceProvider.Clients.csproj", "{3F9FDD2A-23D8-4AA4-B7FF-6CC6B92AB385}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -434,6 +446,26 @@ Global
 		{8BAE8B88-C52A-4C8F-AEBB-0FDF19C7C263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BAE8B88-C52A-4C8F-AEBB-0FDF19C7C263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BAE8B88-C52A-4C8F-AEBB-0FDF19C7C263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B03E90-B85B-4368-ACE8-A26E1487976A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B03E90-B85B-4368-ACE8-A26E1487976A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B03E90-B85B-4368-ACE8-A26E1487976A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B03E90-B85B-4368-ACE8-A26E1487976A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8D47CA-0336-47F5-8163-C62F218097D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8D47CA-0336-47F5-8163-C62F218097D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8D47CA-0336-47F5-8163-C62F218097D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8D47CA-0336-47F5-8163-C62F218097D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D0369E-B93C-4C2C-80F7-DFD3A273F4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D0369E-B93C-4C2C-80F7-DFD3A273F4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D0369E-B93C-4C2C-80F7-DFD3A273F4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D0369E-B93C-4C2C-80F7-DFD3A273F4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86E1B38-F595-41FF-9175-1BA08088B3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86E1B38-F595-41FF-9175-1BA08088B3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86E1B38-F595-41FF-9175-1BA08088B3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86E1B38-F595-41FF-9175-1BA08088B3E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F9FDD2A-23D8-4AA4-B7FF-6CC6B92AB385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9FDD2A-23D8-4AA4-B7FF-6CC6B92AB385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9FDD2A-23D8-4AA4-B7FF-6CC6B92AB385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9FDD2A-23D8-4AA4-B7FF-6CC6B92AB385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -482,6 +514,11 @@ Global
 		{FB10FF8B-0A8F-4F65-82B3-E08DBA141250} = {CF2E345F-BEF8-4375-8FBD-C989F71BDC8A}
 		{B744BBFA-4D47-43F9-B66A-79CF9366515D} = {CF2E345F-BEF8-4375-8FBD-C989F71BDC8A}
 		{8BAE8B88-C52A-4C8F-AEBB-0FDF19C7C263} = {CF2E345F-BEF8-4375-8FBD-C989F71BDC8A}
+		{D4B03E90-B85B-4368-ACE8-A26E1487976A} = {ABA499D9-3EA9-4A62-833C-B2C5AF0B781C}
+		{DA8D47CA-0336-47F5-8163-C62F218097D9} = {ABA499D9-3EA9-4A62-833C-B2C5AF0B781C}
+		{91D0369E-B93C-4C2C-80F7-DFD3A273F4FF} = {ABA499D9-3EA9-4A62-833C-B2C5AF0B781C}
+		{F86E1B38-F595-41FF-9175-1BA08088B3E5} = {ABA499D9-3EA9-4A62-833C-B2C5AF0B781C}
+		{3F9FDD2A-23D8-4AA4-B7FF-6CC6B92AB385} = {ABA499D9-3EA9-4A62-833C-B2C5AF0B781C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.PolicyInjection.6.0.1304.0\lib\NET45
